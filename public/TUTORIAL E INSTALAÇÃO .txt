@@ -1,0 +1,40 @@
+
+comandos e tutorial instalação (~simbolo para comando)
+
+1
+na pasta htdocs com composer instalado e instalado laravel
+~laravel new apiPortal-WS
+
+~cd apiPortal-WS
+
+2 instalar e configurar sanctun
+~composer require laravel/sanctum
+~php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+~php artisan migrate
+
+3 criar tabelas e modelos do projeto
+php artisan make:model Usuario
+php artisan make:model Empresa
+php artisan make:model Vaga
+php artisan make:model Candidatura
+php artisan make:model Mensagem
+
+php artisan make:migration criar_tabela_usuarios
+php artisan make:migration criar_tabela_empresas
+php artisan make:migration criar_tabela_vagas
+php artisan make:migration criar_tabela_candidaturas
+php artisan make:migration criar_tabela_mensagens
+
+
+4 escrever dados nos modelos
+
+5 apos modelos e migrations criados é possivek criar as tabelas no banco via 
+~ php artisan migrate (obs banco de dados deve estar iniciado antes deste comando)
+
+6criar controlles
+~php artisan make: controller AuthController
+~php artisan make: controller UsuarioController
+~php artisan make: controller EmpresaController
+~php artisan make: controller VagaController
+~php artisan make: controller CandidaturaController
+~php artisan make: controller MensagemController
